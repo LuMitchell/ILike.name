@@ -1,1 +1,3 @@
 # ILike.name
+I like xxx...
+<h2>If you like someone or something, just write down his/her/its name.</h2>
