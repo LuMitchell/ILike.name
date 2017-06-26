@@ -6,7 +6,6 @@
 <title>{{ config('app.name') }}</title>
 
 <link href="https://cdn.bootcss.com/flat-ui/2.3.0/css/flat-ui.css" rel="stylesheet">
-<link href="./css/animate.css" type="text/css" rel="stylesheet"> 
 <link href="./css/style.css" type="text/css" rel="stylesheet"> 
 
 </head>
