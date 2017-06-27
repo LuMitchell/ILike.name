@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
-<head>
+<head><!--Author: LuMitchell-->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta name="keywords" content="我喜欢，I Like，ilike.name"/>
+<meta name="description" content="I like boxing, I like painting, I like you..."/>
 <title>{{ config('app.name') }}</title>
 
 <link href="https://cdn.bootcss.com/flat-ui/2.3.0/css/flat-ui.css" rel="stylesheet">
@@ -52,7 +54,7 @@
 							<p class="ilike-span">I Like</p>
 							<div class="you-span">
 								<p id="jtextfill1">
-									<span id="textspan">ilike.name</span>
+									<span id="textspan1">ilike.name</span>
 								</p>
 							</div>
 							<p class="dateandby">2017.6.25&nbsp;&nbsp;&nbsp;&nbsp;  by&nbsp;&nbsp;&nbsp;&nbsp;Mitchell</p>
@@ -61,8 +63,8 @@
 							<p class="ilike-span">I Like</p>
 							<div class="you-span">
 								<p id="jtextfill2">
-									<span id="textspan">
-									qwq.kim.qwq.kim
+									<span id="textspan2">
+									啦啦啦啦啦啦啦啦啦啦啦
 									</span>
 								</p>
 							</div>
@@ -82,6 +84,15 @@
             		<h3 class="tile-title">XXX</h3>
             		<p style="margin-bottom: 0.6em">When I was 17</p>
           		</div>
+          		<div class="tile span-bot2">
+					<p style="margin-bottom: 0; font-size: 0.8em; color: #FFCC33">搜索名字 | Search name</p>
+          			<div>
+						<input type="text" style="width: 80%; height: 50%" placeholder="搜索" class="login-field" maxlength="14" />
+						<br>
+						<button type="button" class="btn btn-embossed search-btn">搜索</button>
+					</div>
+            		<p style="margin-bottom: 0">When I was 21</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -101,7 +112,7 @@
 		{
 			if(!i)
 				{
-					alert("此项为你自己的署名，可不填，不填为匿名");
+					alert("此项为你自己的署名，可不填，不填为匿名");	//Alert
 					i = true;
 				}
 		}
@@ -109,11 +120,31 @@
 	<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
 	<script src="./js/jquery.textfill.min.js"></script>
 	<script>
-		$('#jtextfill1').textfill({ maxFontPixels: 80 });
+		$('#jtextfill1').textfill({ maxFontPixels: 80 });   	//Resize
 		$('#jtextfill2').textfill({ maxFontPixels: 80 });
 	</script>
 	<script>
-		
+		window.onload = function()
+		{
+			var spant1 = document.getElementById('textspan1');
+			var spant2 = document.getElementById('textspan2');
+			if (/[\u4E00-\u9FA5]/i.test(spant1.innerHTML))		//Chinese matching
+			{	
+				spant1.style.top = '0';
+				if(($.trim(spant1.innerHTML).length)>6)			//Remove the blank spaces
+				{
+					spant1 .style.top = '15%';
+				}
+			}
+			if (/[\u4E00-\u9FA5]/i.test(spant2.innerHTML))
+			{	
+				spant2.style.top = '0';
+				if(($.trim(spant2.innerHTML).length)>6)
+				{
+					spant2.style.top = '15%';
+				}
+			}		
+		}
 	</script>
 
 </body>
