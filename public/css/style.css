@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/* https://ilike.name */
 
 html,body
 {
@@ -30,7 +31,8 @@ h1 {
     -webkit-margin-end: 0px;
 }
 
-h1#title { margin-top: 0px; margin-bottom: 0px; font-size: 4.2em }
+h1#title { margin-top: 0px; margin-bottom: 0px; font-size: 4.2em;}
+h1#name-title { margin-top: 0px; margin-bottom: 0px; font-size: 3em;}
 
 div#div-title { padding:1em; padding-top: 2em; }
 
@@ -41,18 +43,27 @@ div#div-title { padding:1em; padding-top: 2em; }
 .span4 { float: right;padding-left: 2%; padding-right: 5%; width: 33%; max-width: 40em; min-width: 8em; position: relative }
 .span-bot1 { background-color: #1ABC9C; padding-top: 5%; padding-bottom: 1%}
 .span-bot2 { background-color: #1ABC9C}
+.name-span-bot1 { background-color: #669999; padding-top: 5%; padding-bottom: 1%}
+.name-span-bot2 { background-color: #669999}
 
 
 .inner-div { position: relative; width: 80%; min-height: 10em; padding-left: 10%; padding-right: 10%; display: inline-block; background-color: aqua}
 
 .ilike-span { position: absolute; top: 0;left: 0; padding: 2%; font-family:Capsuula }
+.name-ilike-span { position: absolute; top: 0;left: 0; padding: 2%; font-family:Capsuula; color: white; }
+
 p.ilike-span { font-size: 2em; margin-bottom: 0; }
+p.name-ilike-span{ font-size: 2em; margin-bottom: 0; color: white; }
 
 div.you-span { text-align: center; height: 75%; margin-top: 10%; margin-bottom: 0; padding-left: 10%; padding-right: 10%; padding-bottom: 0}
-p#jtextfill1 { width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
-p#jtextfill2 { width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
-span#textspan { position: relative; top: 25%; }
+p#jtextfill1 { width: 90%;height: 55%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+p#jtextfill2 { width: 90%;height: 55%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+span#textspan1 { position: relative; top: 25%; }
+span#textspan2 { position: relative; top: 25%; }
+span#name-textspan1 { position: relative; top: 25%; color: white; }
+span#name-textspan2 { position: relative; top: 25%; color: white; }
 span.mid { position:absolute;left:0;top:0;width: 100%;height: 100%; padding: 0; background-color: cornsilk;  }
+span.name-mid { position:absolute;left:0;top:0;width: 100%;height: 100%; padding: 0; background-color: #cccccc;  }
 p.dateandby { float: right; margin-top: -5%; padding-right: 1em; }
 
 .login-form { padding: 0.8em; max-height: 1.8em;}
@@ -81,6 +92,22 @@ p.dateandby { float: right; margin-top: -5%; padding-right: 1em; }
 	text-align: center;
 	color: gray;
 }
+
+.login-field
+{
+	text-align: center;
+}
+
+.search-btn
+{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: xx-small;
+	margin-bottom: 1em;
+	background-color: #C7E0D8;
+}
+
 
 
 p#ilikediv { font-weight: 200; font-size: 1em; margin-bottom: 0.4em; }
@@ -117,9 +144,13 @@ input::-webkit-input-placeholder{
 		padding-right: 10%;
 		padding-bottom: 0;
 	}
-	p#jtextfill1 { width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
-	p#jtextfill2 { width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
-	span#textspan { position: relative; top: 0; }
+	p#jtextfill1 { width: 90%;height: 55%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+	p#jtextfill2 { width: 90%;height: 55%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+	span#textspan1 { position: relative; top: 0; }
+	span#textspan2 { position: relative; top: 0; }
+	span#name-textspan1 { position: relative; top: 25%; color: white; }
+	span#name-textspan2 { position: relative; top: 25%; color: white; }
+	
 }
 
 
@@ -133,14 +164,22 @@ input::-webkit-input-placeholder{
 		padding-right: 10%;
 		padding-bottom: 0;
 	}
-	p#jtextfill1 { width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
-	p#jtextfill2 { width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+	p#jtextfill1 { width: 90%;height: 55%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+	p#jtextfill2 { width: 90%;height: 55%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; }
+	span#textspan1 { position: relative; top: 5%; }
+	span#textspan2 { position: relative; top: 5%; }
+	span#name-textspan1 { position: relative; top: 25%; color: white; }
+	span#name-textspan2 { position: relative; top: 25%; color: white; }
 }
 
 
 
 @media screen and (max-device-width: 500px)
 {
+	body
+	{
+		height: 50em;
+	}
 	.span3
 	{
 		float: none;
@@ -181,6 +220,16 @@ input::-webkit-input-placeholder{
 		padding: 0;
 		background-color: cornsilk;  
 	}
+	span.name-mid 
+	{
+		position:absolute;
+		left:0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		background-color: #cccccc;  
+	}
 	.inner-div
 	{
 		position: relative;
@@ -196,6 +245,12 @@ input::-webkit-input-placeholder{
 		font-size: 1.6em;
 		margin-bottom: 0; 
 	}
+	p.name-ilike-span
+	{ 
+		font-size: 1.6em;
+		margin-bottom: 0; 
+		color: white;
+	}
 	.login-form { padding-left: 0.5em;padding-right: 0.5em; max-height: 1.8em;}
 	.inputbox1 { width: 38% }
 	.inputbox2 { width: 18% }
@@ -206,12 +261,16 @@ input::-webkit-input-placeholder{
 	}
 	p#jtextfill1
 	{ 
-		width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; 
+		width: 100%;height: 55%; padding-left: 0; padding-right: 5%; margin-bottom: 0; 
 	}
 	p#jtextfill2
 	{
-		width: 90%;height: 90%; padding-left: 5%;padding-right: 5%; margin-bottom: 0; 
+		width: 100%;height: 55%; padding-left: 0; padding-right: 5%; margin-bottom: 0; 
 	}
+	span#textspan1 { position: relative; top: 25%; }
+	span#textspan2 { position: relative; top: 25%; }
+	span#name-textspan1 { position: relative; top: 25%; color: white; }
+	span#name-textspan2 { position: relative; top: 25%; color: white; }
 }
 
 
